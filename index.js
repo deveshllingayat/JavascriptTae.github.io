@@ -58,6 +58,7 @@ function validateForm(){
     }
     if(returnval){
         alert("Registered successfully!");
+        window.open('index.html','_self');
     }
     return returnval;
 }
