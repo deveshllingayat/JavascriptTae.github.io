@@ -56,7 +56,9 @@ function validateForm(){
         seterror("cpass", "*Password and Confirm password should match!");
         returnval = false;
     }
-
+    if(returnval){
+        alert("Registered successfully!");
+    }
     return returnval;
 }
 
