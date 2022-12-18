@@ -58,7 +58,7 @@ function validateForm(){
     }
     if(returnval){
         alert("Registered successfully!");
-        window.open('deveshllingayat/Javascripttae.github.io/index.html','_self');
+        window.location('https://deveshllingayat.github.io/Javascripttae.github.io/');
     }
     return returnval;
 }
