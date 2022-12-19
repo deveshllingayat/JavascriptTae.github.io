@@ -11,7 +11,8 @@
 	
         body {
             padding: 10px 50px;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjAUPf0P80GGLg1Qs160t10WmlDVHmqq3WPg&usqp=CAU") ;
+            background-blend-mode:color-dodge  ;
+            background-image: url("ZVNV.gif") ;
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -19,14 +20,12 @@
         	display: block;
         	margin-left: auto;
         	margin-right: auto;
-        	box-shadow:1px 1px 5px black;
-        	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdFSECFhFKdLWBJp5uDc0I4jy5Q7urXARflA&usqp=CAU");
-        	background-repeat: no-repeat;
+        	box-shadow:1px 1px 10px rgb(254, 255, 255) ;
+        	background:rgba(0, 0, 0, 0.256);
         	background-size: cover;
         	border-radius: 10px;
         	padding: 15px;
-        	width: 70%;
-        	height: 70%;
+        	width: 50%;
         }
         .formdesign {
             font-size: 20px;
@@ -50,59 +49,62 @@
         label{
         	display: inline-block;
         	width: 200px;
+            margin-left: 25px;
         }
         .but {
-        	display: block;
-        	box-shadow: 1px 1px 5px blueviolet;
-        	margin-left: auto;
-        	margin-right: auto;
+        	display: inline-block;
+            margin: 3px;
+        	box-shadow: 1px 1px 5px rgb(0, 0, 0);
             border-radius: 9px;
             width: 80px;
             height: 40px;
             font-size: 20px;
-            border:none;
+            background-color: rgb(97, 147, 255);
+            color:white;
         }
         .but:hover{
-        	animation: button 2s infinite;
+        	background-color: rgba(97, 147, 255, 0.74);
+            color:white;
+            transition-duration: 0.2s;
         }
-
+        .button{
+            display: flex;
+            justify-content: center;
+        }
 	     .animate-heading{
   			animation: heading 3s linear infinite;
   			display: block;
   			text-align:center;
   			font-size: 40px;
 		}
-		@keyframes button {
-			0%{
-  			color:blueviolet;
-  			}30%{
-  			color:darkblue;
-  			}60%{
-  			color: blue;
-  			}100%{
-  			color: blueviolet;
-  			}
-		}
+		
 		@keyframes heading {
-			0%{
-  			color:blueviolet;
+            0%{
+  			color:rgb(255, 249, 63);
   			}30%{
-  			color:darkblue;
-  	  		letter-spacing: 1px;
+  			color:rgb(74, 193, 185);
+            letter-spacing: 1px;
   			}60%{
-  			color: cyan;
+  			color: rgb(116, 230, 128);
   			}100%{
-  			color: blueviolet;
+  			color: rgb(226, 214, 43);
   			}
 		}
+        .footer
+        {
+            margin-top: 20px;
+            text-align: center;
+            background:transparent;
+            color: rgb(255, 255, 255);
+        }
 </style>
 </head>
 
 <body>
-    <h1 class="animate-heading">Registration Form</h1>
-    <form aciton ="" name="myForm" onsubmit="return validateForm()"  >
+    <h1 class="animate-heading"> Student Registration Page</h1>
+    <form aciton ="index.html" name="myForm" onsubmit="return validateForm()" method="post">
         <div class="formdesign" id="name">
-            <label>Name:</label><input type="text" name="fname" required><b><div class="formerror"> </div></b>
+            <label>Name of Student:</label><input type="text" name="fname" required><b><div class="formerror"> </div></b>
         </div>
 
         <div class="formdesign" id="email">
@@ -112,7 +114,7 @@
         <div class="formdesign" id="phone">
             <label>Phone:</label><input type="phone" name="fphone" required><b><div class="formerror"></div></b>
         </div>
-
+        
         <div class="formdesign" id="pass">
             <label>Password:</label><input type="password" name="fpass" required><b><div class="formerror"></div></b>
         </div>
@@ -120,10 +122,14 @@
         <div class="formdesign" id="cpass">
             <label>Confirm Password:</label><input type="password" name="fcpass" required><b><div class="formerror"></div></b>
         </div>
-
-        <input class="but" type="submit" value="Submit">
-
+        <div class="button">
+            <input type="reset" class="but" value="Clear"onclick="clearErrors()">
+            <input class="but" type="submit" value="Login">
+        </div>
     </form>
+    <div class="footer">
+        Login Page Made by Devesh Lingayat ETC-Sec-A
+    </div>
 </body>
 <script src="index.js"></script>
 

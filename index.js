@@ -27,7 +27,7 @@ function validateForm(){
     }
 
     if (name.length == 0){
-        seterror("name", "*Length of name cannot be zero!");
+        seterror("name", "*Name field is required!");
         returnval = false;
     }
 
@@ -44,12 +44,13 @@ function validateForm(){
     }
 
     var password = document.forms['myForm']["fpass"].value;
-    if (password.length < 6){
-
-        // Quiz: create a logic to allow only those passwords which contain atleast one letter, one number and one special character and one uppercase letter
-        seterror("pass", "*Password should be atleast 6 characters long!");
+    if (password.length < 8){
+        seterror("pass", "*Password should be atleast 8 characters long!");
         returnval = false;
     }
+
+
+
 
     var cpassword = document.forms['myForm']["fcpass"].value;
     if (cpassword != password){
@@ -57,8 +58,8 @@ function validateForm(){
         returnval = false;
     }
     if(returnval){
-        alert("Registered successfully!");
-        window.location('https://deveshllingayat.github.io/Javascripttae.github.io/');
+        alert("Login Successful!");
+        window.open('index.html','_self');
     }
     return returnval;
 }
