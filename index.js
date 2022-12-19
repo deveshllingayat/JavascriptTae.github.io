@@ -58,7 +58,7 @@ function validateForm(){
         returnval = false;
     }
     if(returnval){
-        alert("Login Successful!");
+        alert("Registration Successful!");
         window.location="https://deveshllingayat.github.io/Javascripttae.github.io/";
     }
     return returnval;
