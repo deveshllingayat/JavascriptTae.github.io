@@ -59,7 +59,7 @@ function validateForm(){
     }
     if(returnval){
         alert("Login Successful!");
-        window.open('index.html','_self');
+        window.location="https://deveshllingayat.github.io/Javascripttae.github.io/";
     }
     return returnval;
 }
